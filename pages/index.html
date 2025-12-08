@@ -149,104 +149,94 @@
   </div>
 
   <!-- section1 -->
-  <section class="w-full py-12 md:py-20 bg-white overflow-hidden">
+  <!-- services -->
+  <section class="w-full max-w-[1920px] mx-auto px-6 py-12 mt-32 lg:mt-0 lg:py-20 bg-white">
+    <div class="max-w-[1170px] mx-auto">
 
-    <div class="max-w-[1160px] mx-auto px-4">
-
-      <div class="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-12 gap-4">
-
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight text-left">
-          Start Your Vacation <br />
-          with Lots of Services!
-        </h2>
-
-        <a href="#"
-          class="text-gray-500 hover:text-orange-500 font-semibold flex items-center gap-2 transition-colors mb-1">
-          View All
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-            class="w-4 h-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 lg:mb-16 gap-4 text-center lg:text-left">
+        <div>
+          <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            Start Your Vacation <br class="hidden lg:block" />
+            with <span class="text-gray-900">Lots of Services!</span>
+          </h2>
+        </div>
+        <a href="#" class="hidden lg:inline-flex items-center text-[#FF6847] font-medium hover:opacity-80 transition">
+          View All Services
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
       </div>
-
-      <div class="flex flex-row md:grid md:grid-cols-4 overflow-x-auto md:overflow-visible snap-x snap-mandatory scroll-smooth 
-                gap-4 md:gap-6 -mx-4 px-4 pb-12 md:pb-0 md:mx-0 items-stretch">
+      <!-- card-item -->
+      <div
+        class="flex flex-nowrap overflow-x-auto pb-8 gap-4 snap-x snap-mandatory -mx-6 px-6 scrollbar-hide lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:mx-0 lg:px-0 lg:pb-0">
 
         <div
-          class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 
-                  flex flex-col items-center text-center min-w-[200px] md:min-w-0 flex-shrink-0 snap-center group cursor-pointer">
-
-          <div
-            class="w-16 h-16 rounded-2xl bg-red-50 text-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
-              <path fill-rule="evenodd"
-                d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z"
-                clip-rule="evenodd" />
-              <path
-                d="M5.082 14.254a6.741 6.741 0 00-2.817.446.75.75 0 00-.372.568A11.144 11.144 0 002.25 18c.958 0 1.885-.125 2.775-.359.186-.889.576-1.719 1.123-2.454.191-.256.401-.497.625-.722a8.98 8.98 0 00-1.691-.211zm13.836 0c.563.225 1.13.435 1.691.635a8.968 8.968 0 01.625.722 6.748 6.748 0 011.123 2.454A11.144 11.144 0 0021.75 18a.75.75 0 00-.372-.568 6.741 6.741 0 00-2.817-.446z" />
+          class="min-w-[280px] snap-center lg:min-w-0 group bg-white rounded-[30px] border border-gray-100 p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+          <div class="w-20 h-20 bg-[#FFF0EC] rounded-2xl flex items-center justify-center mb-6 text-[#FF6847]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
           </div>
-
-          <h3 class="text-lg font-bold text-gray-900 mb-1">Family Vacations</h3>
-          <p class="text-gray-400 text-sm">155 Properties</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Family Vacations</h3>
+          <p class="text-gray-500 text-sm">155 Properties</p>
         </div>
 
         <div
-          class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 
-                  flex flex-col items-center text-center min-w-[200px] md:min-w-0 flex-shrink-0 snap-center group cursor-pointer">
-
-          <div
-            class="w-16 h-16 rounded-2xl bg-red-50 text-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
-              <path fill-rule="evenodd"
-                d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z"
-                clip-rule="evenodd" />
+          class="min-w-[280px] snap-center lg:min-w-0 group bg-white rounded-[30px] border border-gray-100 p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+          <div class="w-20 h-20 bg-[#FFF0EC] rounded-2xl flex items-center justify-center mb-6 text-[#FF6847]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
-
-          <h3 class="text-lg font-bold text-gray-900 mb-1">Scuba Diving</h3>
-          <p class="text-gray-400 text-sm">143 Properties</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Scuba Diving</h3>
+          <p class="text-gray-500 text-sm">143 Properties</p>
         </div>
 
         <div
-          class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 
-                  flex flex-col items-center text-center min-w-[200px] md:min-w-0 flex-shrink-0 snap-center group cursor-pointer">
-
-          <div
-            class="w-16 h-16 rounded-2xl bg-red-50 text-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
-              <path fill-rule="evenodd"
-                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 00-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 01-.189-.866c0-.298.059-.605.189-.866zm2.023 6.828a.75.75 0 10-1.06-1.06 3.75 3.75 0 01-5.304 0 .75.75 0 00-1.06 1.06 5.25 5.25 0 007.424 0z"
-                clip-rule="evenodd" />
+          class="min-w-[280px] snap-center lg:min-w-0 group bg-white rounded-[30px] border border-gray-100 p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+          <div class="w-20 h-20 bg-[#FFF0EC] rounded-2xl flex items-center justify-center mb-6 text-[#FF6847]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-
-          <h3 class="text-lg font-bold text-gray-900 mb-1">Hunting Trip</h3>
-          <p class="text-gray-400 text-sm">122 Properties</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Hunting Trip</h3>
+          <p class="text-gray-500 text-sm">122 Properties</p>
         </div>
 
         <div
-          class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 
-                  flex flex-col items-center text-center min-w-[200px] md:min-w-0 flex-shrink-0 snap-center group cursor-pointer">
-
-          <div
-            class="w-16 h-16 rounded-2xl bg-red-50 text-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
-              <path fill-rule="evenodd"
-                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 9a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V15a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V9z"
-                clip-rule="evenodd" />
+          class="min-w-[280px] snap-center lg:min-w-0 group bg-white rounded-[30px] border border-gray-100 p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+          <div class="w-20 h-20 bg-[#FFF0EC] rounded-2xl flex items-center justify-center mb-6 text-[#FF6847]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-
-          <h3 class="text-lg font-bold text-gray-900 mb-1">Mountain Bike</h3>
-          <p class="text-gray-400 text-sm">185 Properties</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Mountain Bike</h3>
+          <p class="text-gray-500 text-sm">185 Properties</p>
         </div>
 
       </div>
 
+      <div class="mt-8 text-center lg:hidden">
+        <a href="#" class="inline-flex items-center text-[#FF6847] font-medium hover:opacity-80">
+          View All Services
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
+  <!-- pakages -->
 
   <!-- section2 -->
   <!-- --------------dev3/pong--------------- -->
