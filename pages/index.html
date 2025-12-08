@@ -23,27 +23,190 @@
                         'paytone': ['"Paytone One"', 'sans-serif'],
 
                         // (Optional) ถ้าอยากให้ฟอนต์ไหนเป็นฟอนต์หลักของเว็บ ให้ใส่ใน sans
-                        'sans': ['"DM Sans"', 'sans-serif'],
+                        
                     }
                 }
             }
         }
     </script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
 
-<body>
+
+  </head>
+
+<body class="">
 
     <!-- header -->
 
+    <div class="bg-white mb-[60px] md:mb-[0]">
+      <div class="flex justify-between py-5 px-5 mx-auto md:px-40">
+        <img src="/assets/images/logo.svg" alt="" class="" />
+        <img
+          src="/assets/images/Menu-hambergur.svg"
+          alt=""
+          class="md:hidden"
+        />
+        <div class="relative z-20 max-[1440px]:hidden flex items-center gap-10">
+          <a href="#" class="text-[18px] text-[#A8A8A8] pb-1 border-b-2 border-b-[transparent] hover:border-b-[#FE5B3E] transition-all duration-300 hover:text-black hover:font-semibold">Home</a>
+          <a href="#" class="text-[18px] text-[#A8A8A8] pb-1 border-b-2 border-b-[transparent] hover:border-b-[#FE5B3E] transition-all duration-300 hover:text-black hover:font-semibold">About</a>
+          <a href="#" class="text-[18px] text-[#A8A8A8] pb-1 border-b-2 border-b-[transparent] hover:border-b-[#FE5B3E] transition-all duration-300 hover:text-black hover:font-semibold">Blog</a>
+          <a href="#" class="text-[18px] text-[#A8A8A8] pb-1 border-b-2 border-b-[transparent] hover:border-b-[#FE5B3E] transition-all duration-300 hover:text-black hover:font-semibold">Tour Package</a>
+        </div>
+        <div
+          class="max-[1440px]:hidden flex items-center justify-center w-[175px] h-[64px] bg-gradient-to-b from-[#FE5B3E] to-[#FE7B49] rounded-xl"
+        >
+          <p class="text-center text-white text-[18px]">Contact Us</p>
+        </div>
+      </div>
+
+      <div
+        class="bg-[url(/assets/images/bg-mountain.jpg)] bg-cover bg-center h-[750px] flex flex-col justify-center items-center relative before:content-[''] before:absolute before:inset-0 before:bg-white before:opacity-90"
+      >
+        <div
+          class="flex flex-col pt-40 justify-center items-center md:flex-row-reverse md:py-20 md:px-30 md:pt-30"
+        >
+          <div class="relative ">
+            <img
+              src="/assets/images/salmon.svg"
+              alt=""
+              class="relative left-3 w-[270px] md:w-[544px]"
+            />
+            <img
+              src="/assets/images/site-card.svg"
+              class="absolute z-10 top-20 -left-10 w-[76px] md:w-[160px] md:top-40 md:-left-20"
+            />
+          </div>
+
+          <div class="relative">
+            <div class="flex flex-col px-6 py-5">
+              <h1
+                class="text-[30px] font-bold  font-paytone leading-8 pb-5 md:text-[100px] md:leading-[100px]"
+              >
+                Fuel Mind <br />by Travel
+              </h1>
+              <h2
+                class="text-[18px]  font-dm  leading-9 pb-5 md:text-[20px]"
+              >
+                Enthusiastically extend extensive customer service before best
+                breed convergence completely.
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center md:justify-end md:w-320"
+        >
+          <div
+            class="relative z-30 bg-white w-[327px] rounded-2xl py-7 md:flex md:items-center md:w-[1057px] md:justify-between md:px-20"
+          >
+            <div class="flex flex-col md:flex-row md:gap-10">
+              <div
+                class="flex flex-col justify-center items-center gap-3 md:flex-row md:gap-10"
+              >
+                <div class="">
+                  <div class="flex flex-row gap-1">
+                    <p class="text-[#A8A8A8] font-bold">Location</p>
+                    <img
+                      src="/assets/images/fe_arrow-down.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                  </div>
+                  <div class="">
+                    <p class="text-[#221314] font-bold">Cox's Bazer</p>
+                  </div>
+                </div>
+                <div class="">
+                  <img
+                    src="/assets/images/underline.svg"
+                    alt=""
+                    class="w-12 pb-3 md:hidden"
+                  />
+                  <img
+                    src="/assets/images/line.svg"
+                    alt=""
+                    class="h-10 max-[1440px]:hidden"
+                  />
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col justify-center items-center gap-3 md:flex-row md:gap-10"
+              >
+                <div class="">
+                  <div
+                    class="flex flex-row justify-center md:justify-start gap-1"
+                  >
+                    <p class="text-[#A8A8A8] font-bold">Date</p>
+                    <img
+                      src="/assets/images/fe_arrow-down.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                  </div>
+                  <div class="">
+                    <p class="text-[#221314] font-bold">
+                      Mon, 14 Mar - Thu, 17 Mar
+                    </p>
+                  </div>
+                </div>
+                <div class="">
+                  <img
+                    src="/assets/images/underline.svg"
+                    alt=""
+                    class="w-12 pb-3 md:hidden"
+                  />
+                  <img
+                    src="/assets/images/line.svg"
+                    alt=""
+                    class="h-10 max-[1440px]:hidden"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col justify-center items-center gap-3 md:flex-row md:gap-10"
+              >
+                <div class="">
+                  <div class="flex flex-row gap-1">
+                    <p class="text-[#A8A8A8] font-bold">Avg. Price</p>
+                    <img
+                      src="/assets/images/fe_arrow-down.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                  </div>
+                  <div class="">
+                    <p class="pb-7 md:pb-0 text-[#221314] font-bold">$300 - $600</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center md:justify-end">
+              <div
+                class="flex justify-center flex-row items-center gap-2 content-center bg-gradient-to-b from-[#FE5B3E] to-[#FE7B49] text-white font-semibold text-[16px] w-[177px] h-[70px] text-center rounded-xl">
+                Explore
+                <img src="/assets/images/bi_arrow-left.svg" alt="" class="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- section1 -->
 
 
     <!-- section2 -->
+    
+<!-- --------------dev3/pong--------------- -->
 
 
     <!-- footer -->
