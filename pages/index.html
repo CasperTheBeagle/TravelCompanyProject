@@ -2,41 +2,596 @@
 <html lang="th">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Company Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Company Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#0ea5e9',
+            'secondary': '#64748b',
+          },
+          fontFamily: {
+            // ตั้งชื่อเล่นให้ฟอนต์เพื่อเรียกใช้ใน class
+            'poppins': ['Poppins', 'sans-serif'],
+            'dm': ['"DM Sans"', 'sans-serif'],
+            'paytone': ['"Paytone One"', 'sans-serif'],
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#0ea5e9',
-                        'secondary': '#64748b',
-                    },
-                    fontFamily: {
-                        // ตั้งชื่อเล่นให้ฟอนต์เพื่อเรียกใช้ใน class
-                        'poppins': ['Poppins', 'sans-serif'],
-                        'dm': ['"DM Sans"', 'sans-serif'],
-                        'paytone': ['"Paytone One"', 'sans-serif'],
+            // (Optional) ถ้าอยากให้ฟอนต์ไหนเป็นฟอนต์หลักของเว็บ ให้ใส่ใน sans
 
-                        // (Optional) ถ้าอยากให้ฟอนต์ไหนเป็นฟอนต์หลักของเว็บ ให้ใส่ใน sans
-                        'sans': ['"DM Sans"', 'sans-serif'],
-                    }
-                }
-            }
+          }
         }
-    </script>
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
 
-<body>
+<body class="overflow-y-auto">
 
+  <!-- header -->
+
+  <div class="bg-white mb-[60px] md:mb-[0]">
+    <div class="flex justify-between py-5 px-5 mx-auto md:px-40">
+      <img src="/assets/images/logo.svg" alt="" class="" />
+      <img src="/assets/images/Menu-hambergur.svg" alt="" class="md:hidden" />
+      <div class="relative z-20 max-[1440px]:hidden flex items-center gap-10">
+        <a href="#"
+          class="text-[18px] text-[#A8A8A8] pb-1 border-b-2 border-b-[transparent] hover:border-b-[#FE5B3E] transition-all duration-300 hover:text-black hover:font-semibold">Home</a>
+        <a href="#"
+          class="text-[18px] text-[#A8A8A8] pb-1 border-b-2 border-b-[transparent] hover:border-b-[#FE5B3E] transition-all duration-300 hover:text-black hover:font-semibold">About</a>
+        <a href="#"
+          class="text-[18px] text-[#A8A8A8] pb-1 border-b-2 border-b-[transparent] hover:border-b-[#FE5B3E] transition-all duration-300 hover:text-black hover:font-semibold">Blog</a>
+        <a href="#"
+          class="text-[18px] text-[#A8A8A8] pb-1 border-b-2 border-b-[transparent] hover:border-b-[#FE5B3E] transition-all duration-300 hover:text-black hover:font-semibold">Tour
+          Package</a>
+      </div>
+      <div
+        class="max-[1440px]:hidden flex items-center justify-center w-[175px] h-[64px] bg-gradient-to-b from-[#FE5B3E] to-[#FE7B49] rounded-xl">
+        <p class="text-center text-white text-[18px]">Contact Us</p>
+      </div>
+    </div>
+
+    <div
+      class="bg-[url(/assets/images/bg-mountain.jpg)] bg-cover bg-center h-[750px] flex flex-col justify-center items-center relative before:content-[''] before:absolute before:inset-0 before:bg-white before:opacity-90">
+      <div
+        class="flex flex-col pt-40 justify-center items-center md:flex-row-reverse md:py-20 md:px-30 md:pt-30 min-[1440px]:gap-[200px]">
+        <div class="relative ">
+          <img src="/assets/images/salmon.svg" alt="" class="relative left-3 w-[270px] md:w-[544px]" />
+          <img src="/assets/images/site-card.svg"
+            class="absolute z-10 top-20 -left-10 w-[76px] md:w-[160px] md:top-40 md:-left-20" />
+        </div>
+
+        <div class="relative">
+          <div class="flex flex-col px-6 py-5">
+            <h1 class="text-[30px] font-bold  font-paytone leading-8 pb-5 md:text-[100px] md:leading-[100px]">
+              Fuel Mind <br />by Travel
+            </h1>
+            <h2 class="text-[18px]  font-dm text-[#5A7184] leading-9 pb-5 md:text-[20px] min-[1440px]:w-[500px]">
+              Enthusiastically extend extensive customer service before best
+              breed convergence completely.
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center md:justify-end md:w-320">
+        <div
+          class="relative z-30 bg-white w-[327px] rounded-2xl py-7 md:flex md:items-center md:w-[1057px] md:justify-between md:px-20">
+          <div class="flex flex-col md:flex-row md:gap-10">
+            <div class="flex flex-col justify-center items-center gap-3 md:flex-row md:gap-10">
+              <div class="">
+                <div class="flex flex-row gap-1">
+                  <p class="text-[#A8A8A8] font-bold">Location</p>
+                  <img src="/assets/images/fe_arrow-down.svg" alt="" class="w-5" />
+                </div>
+                <div class="">
+                  <p class="text-[#221314] font-bold">Cox's Bazer</p>
+                </div>
+              </div>
+              <div class="">
+                <img src="/assets/images/underline.svg" alt="" class="w-12 pb-3 md:hidden" />
+                <img src="/assets/images/line.svg" alt="" class="h-10 max-[1440px]:hidden" />
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-center items-center gap-3 md:flex-row md:gap-10">
+              <div class="">
+                <div class="flex flex-row justify-center md:justify-start gap-1">
+                  <p class="text-[#A8A8A8] font-bold">Date</p>
+                  <img src="/assets/images/fe_arrow-down.svg" alt="" class="w-5" />
+                </div>
+                <div class="">
+                  <p class="text-[#221314] font-bold">
+                    Mon, 14 Mar - Thu, 17 Mar
+                  </p>
+                </div>
+              </div>
+              <div class="">
+                <img src="/assets/images/underline.svg" alt="" class="w-12 pb-3 md:hidden" />
+                <img src="/assets/images/line.svg" alt="" class="h-10 max-[1440px]:hidden" />
+              </div>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-3 md:flex-row md:gap-10">
+              <div class="">
+                <div class="flex flex-row gap-1">
+                  <p class="text-[#A8A8A8] font-bold">Avg. Price</p>
+                  <img src="/assets/images/fe_arrow-down.svg" alt="" class="w-5" />
+                </div>
+                <div class="">
+                  <p class="pb-7 md:pb-0 text-[#221314] font-bold">$300 - $600</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center md:justify-end">
+            <div
+              class="flex justify-center flex-row items-center gap-2 content-center bg-gradient-to-b from-[#FE5B3E] to-[#FE7B49] text-white font-semibold text-[16px] w-[177px] h-[70px] text-center rounded-xl">
+              Explore
+              <img src="/assets/images/bi_arrow-left.svg" alt="" class="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- section1 -->
+  <!-- services -->
+  <section class="w-full max-w-[1920px] mx-auto px-6 py-12 mt-32 lg:mt-0 lg:py-20 bg-white">
+    <div class="max-w-[1170px] mx-auto">
+
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 lg:mb-16 gap-4 text-center lg:text-left">
+        <div>
+          <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            Start Your Vacation <br class="hidden lg:block" />
+            with <span class="text-gray-900">Lots of Services!</span>
+          </h2>
+        </div>
+        <a href="#" class="hidden lg:inline-flex items-center text-[#FF6847] font-medium hover:opacity-80 transition">
+          View All Services
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+      <!-- card-item -->
+      <div
+        class="flex flex-nowrap overflow-x-auto pb-8 gap-4 snap-x snap-mandatory -mx-6 px-6 scrollbar-hide lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:mx-0 lg:px-0 lg:pb-0">
+
+        <div
+          class="min-w-[280px] snap-center lg:min-w-0 group bg-white rounded-[30px] border border-gray-100 p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+          <div class="w-20 h-20 bg-[#FFF0EC] rounded-2xl flex items-center justify-center mb-6 text-[#FF6847]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Family Vacations</h3>
+          <p class="text-gray-500 text-sm">155 Properties</p>
+        </div>
+
+        <div
+          class="min-w-[280px] snap-center lg:min-w-0 group bg-white rounded-[30px] border border-gray-100 p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+          <div class="w-20 h-20 bg-[#FFF0EC] rounded-2xl flex items-center justify-center mb-6 text-[#FF6847]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Scuba Diving</h3>
+          <p class="text-gray-500 text-sm">143 Properties</p>
+        </div>
+
+        <div
+          class="min-w-[280px] snap-center lg:min-w-0 group bg-white rounded-[30px] border border-gray-100 p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+          <div class="w-20 h-20 bg-[#FFF0EC] rounded-2xl flex items-center justify-center mb-6 text-[#FF6847]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Hunting Trip</h3>
+          <p class="text-gray-500 text-sm">122 Properties</p>
+        </div>
+
+        <div
+          class="min-w-[280px] snap-center lg:min-w-0 group bg-white rounded-[30px] border border-gray-100 p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+          <div class="w-20 h-20 bg-[#FFF0EC] rounded-2xl flex items-center justify-center mb-6 text-[#FF6847]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Mountain Bike</h3>
+          <p class="text-gray-500 text-sm">185 Properties</p>
+        </div>
+
+      </div>
+
+      <div class="mt-8 text-center lg:hidden">
+        <a href="#" class="inline-flex items-center text-[#FF6847] font-medium hover:opacity-80">
+          View All Services
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- pakages -->
+  <section class="w-full max-w-[1920px] mx-auto px-6 py-12 lg:py-24 bg-white">
+    <div class="max-w-[1170px] mx-auto">
+
+      <div class="text-center mb-12 lg:mb-16">
+        <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
+          Our Upcoming <br /> Tour Package
+        </h2>
+      </div>
+
+      <div
+        class="flex flex-nowrap overflow-x-auto pb-8 gap-6 lg:grid lg:grid-cols-3 lg:gap-8 snap-x snap-mandatory -mx-6 px-6 lg:mx-0 lg:px-0">
+
+        <div class="min-w-[300px] snap-center flex flex-col group cursor-pointer">
+          <div class="relative w-full h-[400px] lg:h-[500px] rounded-[30px] overflow-hidden mb-6">
+            <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1974&auto=format&fit=crop"
+              alt="Eiffel Tower"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div
+              class="absolute top-6 right-6 bg-white/30 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full">
+              <span class="text-white font-bold text-xl">$599</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-start px-2">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[#FF6847]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <h3 class="text-2xl font-bold text-gray-900">Eiffel Tower</h3>
+              </div>
+              <p class="text-gray-500 ml-8">5d - 4n</p>
+            </div>
+            <div class="flex gap-1 text-[#FF6847] pt-1">
+              <span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span
+                class="text-lg">★</span><span class="text-lg">★</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="min-w-[300px] snap-center flex flex-col group cursor-pointer">
+          <div class="relative w-full h-[400px] lg:h-[500px] rounded-[30px] overflow-hidden mb-6">
+            <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1974&auto=format&fit=crop"
+              alt="Big Bear Lake"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div
+              class="absolute top-6 right-6 bg-white/30 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full">
+              <span class="text-white font-bold text-xl">$480</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-start px-2">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[#FF6847]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <h3 class="text-2xl font-bold text-gray-900">Big Bear Lake</h3>
+              </div>
+              <p class="text-gray-500 ml-8">5d - 4n</p>
+            </div>
+            <div class="flex gap-1 text-[#FF6847] pt-1">
+              <span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span
+                class="text-lg">★</span><span class="text-lg">★</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="min-w-[300px] snap-center flex flex-col group cursor-pointer">
+          <div class="relative w-full h-[400px] lg:h-[500px] rounded-[30px] overflow-hidden mb-6">
+            <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1974&auto=format&fit=crop"
+              alt="Colorado Springs"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div
+              class="absolute top-6 right-6 bg-white/30 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full">
+              <span class="text-white font-bold text-xl">$550</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-start px-2">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[#FF6847]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <h3 class="text-2xl font-bold text-gray-900">Colorado Springs</h3>
+              </div>
+              <p class="text-gray-500 ml-8">5d - 4n</p>
+            </div>
+            <div class="flex gap-1 text-[#FF6847] pt-1">
+              <span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span
+                class="text-lg">★</span><span class="text-lg">★</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center">
+        <button
+          class="bg-[#FF6847] text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-[#e55a3b] transition-all hover:scale-105 shadow-lg shadow-orange-200 inline-flex items-center gap-2">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- section2 -->
+  <!-- --------------dev3/pong--------------- -->
+  <section
+    class="w-[375px] h-[1094px] md:w-[1920px] md:h-[888px] bg-[#FEF9F3] pt-[80px] md:pt-0 mx-auto md:relative m-0 p-0">
+    <div class="md:w-full md:h-full md:relative">
+      <div class="hidden md:block md:absolute md:inset-0">
+        <!-- Card 1 -->
+        <div class="absolute w-[327px] h-[450px] rounded-[20px] bg-[#C4C4C4] left-[-112px] top-[230px]">
+          <div class="absolute bottom-[30px] left-[27px] right-[28px] flex flex-row justify-between items-center">
+            <div>
+              <h2 class="text-white font-[600] text-[20px]" style="font-family: 'Poppins', sans-serif">
+                Great Wall of China <br /><span class="text-[#EAEAEA] text-[18px] font-[400]"
+                  style="font-family: 'DM Sans', sans-serif">Beijing, China</span>
+              </h2>
+            </div>
+            <div class="flex items-center gap-[10px]">
+              <span class="text-white text-[18px] font-semibold">4.8</span>
+              <svg class="w-[18px] h-[18px] text-white fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="absolute w-[327px] h-[450px] rounded-[20px] bg-[#C4C4C4] left-[250px] top-[200px]">
+          <div class="absolute bottom-[30px] left-[27px] right-[28px] flex flex-row justify-between items-center">
+            <div>
+              <h2 class="text-white font-[600] text-[20px]" style="font-family: 'Poppins', sans-serif">
+                Lake Powell <br /><span class="text-[#EAEAEA] text-[18px] font-[400]"
+                  style="font-family: 'DM Sans', sans-serif">U.S.A</span>
+              </h2>
+            </div>
+            <div class="flex items-center gap-[10px]">
+              <span class="text-white text-[18px] font-semibold">4.8</span>
+              <svg class="w-[18px] h-[18px] text-white fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="absolute w-[327px] h-[450px] rounded-[20px] bg-[#C4C4C4] left-[612px] top-[230px]">
+          <div class="absolute bottom-[30px] left-[27px] right-[28px] flex flex-row justify-between items-center">
+            <div>
+              <h2 class="text-white font-[600] text-[20px]" style="font-family: 'Poppins', sans-serif">
+                Deep Creek Lake <br /><span class="text-[#EAEAEA] text-[18px] font-[400]"
+                  style="font-family: 'DM Sans', sans-serif">Maryland</span>
+              </h2>
+            </div>
+            <div class="flex items-center gap-[10px]">
+              <span class="text-white text-[18px] font-semibold">4.8</span>
+              <svg class="w-[18px] h-[18px] text-white fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ลูกศร -->
+      <div class="hidden md:block md:absolute md:bottom-[160px] md:left-[19%] md:flex md:gap-[30px] z-50">
+        <img src="../assets/images/arrow.svg" alt="Previous" class="w-[25px] h-[27px] rotate-180"
+          style="opacity: 0.6; filter: brightness(0) saturate(100%) invert(55%) sepia(95%) saturate(4051%) hue-rotate(347deg) brightness(101%) contrast(99%);" />
+        <img src="../assets/images/arrow.svg" alt="Next" class="w-[42px] h-[27px]"
+          style="filter: brightness(0) saturate(100%) invert(55%) sepia(95%) saturate(4051%) hue-rotate(347deg) brightness(101%) contrast(99%);" />
+      </div>
+
+      <!-- กล่องขวา -->
+      <div class="hidden md:block md:absolute md:w-[574px] md:h-[406px] md:right-[250px] md:top-[237px] ">
+        <h1 class="text-[48px]  font-[700] text-[#221314] leading-[68px]  font-sans"
+          style="font-family: 'Poppins', sans-serif">
+          Most Popular <br />Destination of Us!
+        </h1>
+        <p class="mt-[30px] text-[16px]  text-[#625858] leading-[40px] font-[400]"
+          style="font-family: 'DM Sans', sans-serif">
+          Credibly unleash economically sound e-business with<br>
+          bleeding-edge users. Uniquely simplify mission-critical benefits with<br> cross-unit manufactured products.
+          Energistically re-engineer
+        </p>
+        <!-- ปุ่ม view all -->
+        <button
+          class="w-[180px] h-[70px] rounded-[15px] mt-[40px] bg-gradient-to-r from-[#FE5B3E] to-[#FE7B49] text-[#FFFFFF] flex items-center justify-center gap-[20px] hover:from-[#FE5B3E] hover:to-[#FE7B49] transition-all">
+          <span class="font-[700] text-[16px]">View All</span>
+          <img src="../assets/images/arrow.svg" alt="Arrow icon" class="w-[20px] h-[20px]" />
+        </button>
+      </div>
+
+    </div>
+    <!-- Mobile Section -->
+    <div class="md:hidden">
+      <header class="w-[327px] h-[284px] ml-[24px]">
+        <h1 class="text-[24px] font-[700] text-[#221314] leading-[34px] font-sans"
+          style="font-family: 'Poppins', sans-serif">
+          Most Popular <br />Destination of Us!
+          <p class="mt-[16px] text-[18px] text-[#625858] leading-[40px] font-[400]"
+            style="font-family: 'DM Sans', sans-serif">
+            Credibly unleash economically sound<br>
+            e-business with bleeding-edge users.<br>
+            Uniquely simplify mission-critical<br>
+            benefits with cross-unit
+            manufactured products. Energistically re-engineer
+          </p>
+        </h1>
+      </header>
+      <!-- กล่องเทา -->
+      <div class="w-[327px] h-[450px] rounded-[20px] mx-auto mt-[40px] bg-[#C4C4C4] flex">
+        <div
+          class="w-[272px] h-[60px] mt-[360px] mb-[30px] ml-[27px] mr-[28px] flex flex-row justify-between items-center">
+          <h2 class="text-[#FFFFFF] font-[600] text-[20px]" style="font-family: 'Poppins', sans-serif">
+            Great Wall of China <br /><span class="text-[#EAEAEA] text-[18px] font-[400]"
+              style="font-family: 'DM Sans', sans-serif">Beijing, China</span>
+          </h2>
+          <div class="bottom-[30px] right-[30px] flex items-center gap-[10px]">
+            <span class="text-white text-[18px] font-semibold">4.8</span>
+            <svg class="w-[18px] h-[18px] text-white fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- ปุ่ม view all (pagination dots) -->
+      <div class="w-[92px] h-[20px] flex justify-center gap-2 mt-[30px] mb-[80px] mx-auto">
+        <div class="w-[20px] h-[20px] rounded-full bg-[#E9E4DE]"></div>
+        <div
+          class="w-[20px] h-[20px] rounded-full flex items-center justify-center relative bg-[#FEF9F3] border-[0.5px] border-[#FF8345]">
+          <div class="w-[7px] h-[7px] rounded-full absolute bg-[#FF8345]"></div>
+        </div>
+        <div class="w-[20px] h-[20px] rounded-full bg-[#E9E4DE]"></div>
+      </div>
+      <button
+        class="w-[180px] h-[70px] rounded-[15px] mx-auto mt-[-20px] mb-[40px] bg-gradient-to-r from-[#FE5B3E] to-[#FE7B49] text-[#FFFFFF] flex items-center justify-center gap-[20px] hover:from-[#FE5B3E] hover:to-[#FE7B49] transition-all">
+        <span class="font-[700] text-[16px]">View All</span>
+        <img src="../assets/images/arrow.svg" alt="Arrow icon" class="w-[20px] h-[20px]" />
+      </button>
+  </section>
+
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="w-[375px] min-h-screen md:w-[1920px] md:h-[987px] bg-white  md:pt-0 mx-auto md:relative m-0 p-0">
+    <!-- วงกลม -->
+    <div class="hidden md:flex flex-row justify-center items-center ">
+      <!-- วงกลมหลัง -->
+      <div class=" absolute  z-1 md:left-[250px] md:top-[264px]">
+        <img src="../assets/images/circlebehide.png" alt="Salmon circle" class="w-[632px] h-[632px]" />
+      </div>
+      <div class=" absolute z-2 md:left-[312.34px] md:top-[323px]">
+        <img src="../assets/images/orangecircle.png" alt="Salmon circle" class="w-[544.47px] h-[544.47px]" />
+      </div>
+      <!-- Right Section - Text Content -->
+      <div class="absolute md:w-[571px] md:h-[513px] md:right-[250px] md:top-[330px]">
+        <h2 class="text-[32px] md:text-[48px] font-[700] text-[#221314]  md:leading-[68px] mb-[24px]"
+          style="font-family: 'Poppins', sans-serif">
+          Feedback from<br>Our Customers
+        </h2>
+
+        <p class="md:font-[600] md:text-[24px] md:text-[#221314]  md:leading-[48px] mb-[24px]"
+          style="font-family: 'DM Sans', sans-serif">
+          "I've Went ot America from Tripp Play about 1<br>
+          years ago. Tripp make the prototyping<br>
+          process so easy and faster. I feel this is the<br>
+          best apps for Prototyping use"
+        </p>
+
+        <p class="text-[16px] md:text-[18px] text-[#625858] leading-[24px] mb-[50px]"
+          style="font-family: 'DM Sans', sans-serif">
+          — Ferdous - CEO of Coco
+        </p>
+
+        <!-- Navigation Arrows -->
+        <div class="flex gap-[40px]">
+          <button
+            class="w-[36px] h-[36px] rounded-full bg-gradient-to-r from-[#FE5B3E] to-[#FE7B49] flex items-center justify-center">
+            <img src="../assets/images/arrow.svg" alt="Previous" class="w-5 h-5 rotate-180"
+              style="filter: brightness(0) invert(1);" />
+          </button>
+          <button class="w-[36px] h-[36px] rounded-full flex items-center justify-center"
+            style="background: linear-gradient(to right, rgba(254, 91, 62, 0.5), rgba(254, 123, 73, 0.5));">
+            <img src="../assets/images/arrow.svg" alt="Next" class="w-5 h-5" style="filter: brightness(0) invert(1);" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Section -->
+    <div class="md:hidden w-[375px] h-[1008px] relative bg-[#FFFFFF]">
+      <div class="md:hidden ">
+        <div class="absolute  z-1 left-[10px] top-[137.87px] ">
+          <img src="../assets/images/circlebehide.png" alt="Salmon circle" class="w-[351.66px] h-[351.66px]" />
+        </div>
+        <div class=" absolute z-2 left-[44.69px] top-[170.7px]">
+          <img src="../assets/images/orangecircle.png" alt="Salmon circle" class="w-[302.96px] h-[302.96px]" />
+        </div>
+        <div class="relative w-[327px] h-[455px] top-[520px] left-[24px]">
+          <h2 class="text-[24px] text-[#221314] leading-[34px] font-[700] mb-[30px]"
+            style="font-family: 'Poppins', sans-serif">
+            Feedback from<br>Our Customers
+          </h2>
+
+          <p class="text-[20px] text-[#221314] leading-[34px] font-[600] mb-[16px]"
+            style="font-family: 'DM Sans', sans-serif">
+            "I've Went ot America from<br>
+            Tripp Play about 1 years ago.<br>
+            Tripp make the prototyping<br>
+            process so easy and faster. I<br>
+            feel this is the best apps for<br>
+            Prototyping use"
+          </p>
+
+          <p class="text-[18px] text-[#625858] font-[400] mt-[16px] " style="font-family: 'DM Sans', sans-serif">
+            — Ferdous - CEO of Coco
+          </p>
+
+          <!-- Mobile Navigation Arrows -->
+          <div class="flex gap-[20px] mt-[36px] px-[5px]">
+            <button
+              class="w-[35px] h-[35px] rounded-full bg-gradient-to-r from-[#FE5B3E] to-[#FE7B49] flex items-center justify-center">
+              <img src="../assets/images/arrow.svg" alt="Previous" class="w-5 h-5 rotate-180"
+                style="filter: brightness(0) invert(1);" />
+            </button>
+            <button class="w-[36px] h-[36px] rounded-full flex items-center justify-center"
+              style="background: linear-gradient(to right, rgba(254, 91, 62, 0.5), rgba(254, 123, 73, 0.5));">
+              <img src="../assets/images/arrow.svg" alt="Next" class="w-5 h-5"
+                style="filter: brightness(0) invert(1);" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
 
 
 </body>
