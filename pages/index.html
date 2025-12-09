@@ -2,28 +2,31 @@
 <html lang="th">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Company Project</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Company Project</title>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'primary': '#0ea5e9',
-            'secondary': '#64748b',
-          },
-          fontFamily: {
-            // ตั้งชื่อเล่นให้ฟอนต์เพื่อเรียกใช้ใน class
-            'poppins': ['Poppins', 'sans-serif'],
-            'dm': ['"DM Sans"', 'sans-serif'],
-            'paytone': ['"Paytone One"', 'sans-serif'],
+    <script src="https://cdn.tailwindcss.com"></script>
 
-            // (Optional) ถ้าอยากให้ฟอนต์ไหนเป็นฟอนต์หลักของเว็บ ให้ใส่ใน sans
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0ea5e9',
+                        'secondary': '#64748b',
+                    },
+                    fontFamily: {
+                        // ตั้งชื่อเล่นให้ฟอนต์เพื่อเรียกใช้ใน class
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'dm': ['"DM Sans"', 'sans-serif'],
+                        'paytone': ['"Paytone One"', 'sans-serif'],
 
-          }
+                        // (Optional) ถ้าอยากให้ฟอนต์ไหนเป็นฟอนต์หลักของเว็บ ให้ใส่ใน sans
+                        'sans': ['"DM Sans"', 'sans-serif'],
+                    }
+                }
+            }
         }
       }
     }
@@ -600,19 +603,12 @@
             Feedback from<br>Our Customers
           </h2>
 
-          <p class="text-[20px] text-[#221314] leading-[34px] font-[600] mb-[16px]"
-            style="font-family: 'DM Sans', sans-serif">
-            "I've Went ot America from<br>
-            Tripp Play about 1 years ago.<br>
-            Tripp make the prototyping<br>
-            process so easy and faster. I<br>
-            feel this is the best apps for<br>
-            Prototyping use"
-          </p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
 
-          <p class="text-[18px] text-[#625858] font-[400] mt-[16px] " style="font-family: 'DM Sans', sans-serif">
-            — Ferdous - CEO of Coco
-          </p>
+<body>
 
           <!-- Mobile Navigation Arrows -->
           <div class="flex gap-[20px] mt-[36px] px-[5px]">
